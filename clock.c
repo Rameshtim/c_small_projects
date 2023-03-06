@@ -38,7 +38,7 @@ int main()
 			{
 				if (ss == 60)
 					break;
-				system("cls");
+				system("clear"); //use system("cls"); for windows
 				printf("%02d : %02d : %02d", hh, mm, ss);
 				sleep(1);
 				ss++;
