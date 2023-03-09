@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
-#include<time.h>
+#include <time.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
 	// scanf("%d", &mm);
 	// printf("Give me the current second now:- ");
 	// scanf("%d", &ss);
-
+	
 	time_t rawtime;
 	struct tm *timeinfo;
 	int hh, mm, ss;
@@ -38,9 +39,11 @@ int main()
 			{
 				if (ss == 60)
 					break;
+				//write(1, "XX\n", 3);
 				system("clear"); //use system("cls"); for windows
-				printf("%02d : %02d : %02d", hh, mm, ss);
+				printf("%.2d : %.2d : %.2d\n", hh, mm, ss);
 				sleep(1);
+
 				ss++;
 			}
 			mm++;
